@@ -1,1 +1,3 @@
-# Projeto3Bim-Shooter
+Projeto 3º Bimestre
+Dupla- Bryan Martinez
+     - Gustavo Gomes
