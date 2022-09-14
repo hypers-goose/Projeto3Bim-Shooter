@@ -16,8 +16,8 @@ public class PlayerMovement : MonoBehaviour
 
         rb2D = gameObject.GetComponent<Rigidbody2D>();
         moveSpeed = 3f;
-        jumpForce = 60f;
         InAir = false;
+        jumpForce = 0f;
     }
 
     // Update is called once per frame
@@ -52,18 +52,20 @@ public class PlayerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-    if(collision.gameObject.tag == "Ground ")
+    if(collision.gameObject.tag == "Ground")
     {
         InAir= false;
-    }
+            jumpForce = 80f;
+        }
 
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-    if(collision.gameObject.tag == "Ground ")
+    if(collision.gameObject.tag == "Ground")
     {
      InAir= true;
+            jumpForce = 0f;
     }
 
     }}
